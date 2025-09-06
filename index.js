@@ -19,6 +19,11 @@ const db = getFirestore();
 const app = express();
 app.use(cors());
 app.use(express.json());
+// ...existing code...
+app.get('/', (req, res) => {
+  res.send('Backend is running!');
+});
+// ...existing code...
 
 // ✅ Route: Welcome Bonus on First Login
 app.post("/bonus", async (req, res) => {
